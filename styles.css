@@ -1,0 +1,105 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nunito&display=swap');
+:root{
+    --bgColorLight: #7b2fc1;
+    --bgColorDark: #2c183e;
+    --tokenWinColor: coral;
+    --lightBorder:#ffc45d;
+    --darkBorder: #d8baf1;
+    --tokenColorLight: #000;
+    --tokenColorDark: #C6DE41;
+}
+
+body{
+    margin:0;
+    background-color: var(--bgColorLight);
+    font-family: 'Indie Flower', cursive;
+}
+
+#gameScreen{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    
+    
+}
+.controls{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2em;
+    
+}
+img{
+    margin-left: 10px;
+    padding: 3px;
+    max-width: 35px;
+    height: auto;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 #000000 ;
+    background-color: var(--bgColorLight);
+    border-radius: 100%;
+}
+#winningBoard{
+    
+    margin-top: 0;
+    font-size: 4em;
+    color: var(--tokenWinColor);
+
+    
+}
+
+.board{
+    padding: 10px;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 9rem 9rem 9rem;
+    grid-template-rows: 9rem 9rem 9rem;
+    
+}
+.cell{
+    border: 7px solid var(--lightBorder);
+
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    
+    display: flex;
+    
+    font-size: 11em;
+    color: var(--tokenColorLight);
+}
+.cell:first-child, .cell:nth-child(2), .cell:nth-child(3){
+    
+    border-top: none;
+}
+.cell:first-child, .cell:nth-child(4), .cell:nth-child(7){
+    
+    border-left: none;
+}
+.cell:nth-child(3), .cell:nth-child(6), .cell:nth-child(9){
+  
+    border-right: none;
+}
+.cell:nth-child(7), .cell:nth-child(8), .cell:nth-child(9){
+    border-bottom: none;
+}
+
+#buttons{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+#restart:active, #mode:active{
+    transform: translateY(-5px);
+}
+
+
+
